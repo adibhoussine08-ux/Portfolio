@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Adib Houssine</title>
+  <meta name="description" content="Portfolio d'Adib Houssine, étudiant en 1ère année informatique et développeur Full-Stack en devenir." />
+  <meta name="keywords" content="Adib Houssine, portfolio, développeur, Java, Python, Go, HTML, CSS, projets" />
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="icon" href="/static/ICONS/portfolio_briefcase_showcase_business_adobe_portfolio_icon_191043.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Toggle thème clair/sombre -->
+  <input type="checkbox" id="theme-toggle" class="visually-hidden" aria-label="Basculer le thème" />
+  <div class="page">
+    <header class="site-header">
+      <nav class="nav" aria-label="Navigation principale">
+        <a class="brand" href="#home">ADIB <span>HOUSSINE</span></a>
+        <ul class="nav-list">
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <label for="theme-toggle" class="btn theme-btn" aria-controls="theme-toggle">Mode</label>
+      </nav>
+    </header>
+
+    <main id="home" class="home">
+      <section class="hero">
+        <div class="hero-text">
+          <h4>Bonjour, je m'appelle</h4>
+          <h1>Adib <span>Houssine</span></h1>
+          <h3>Étudiant en 1ère année informatique</h3>
+          <p class="hero-sub">Passionné par le développement et l’apprentissage de technologies modernes.</p>
+          <a href="docs/CV-Adib-Houssine.pdf" class="btn primary">Télécharger le CV</a>
+          <div class="social" aria-label="Réseaux sociaux">
+            <a href="https://www.linkedin.com/in/houssine-adib-09879638a/" target="_blank" rel="noopener">
+              <img src="/static/IMG/linkedin_socialnetwork_17441.png" alt="Profil LinkedIn" />
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="/static/IMG/DSC_2924.jpg" alt="Photo de profil d'Adib Houssine" class="profile-image" />
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <h2>À propos</h2>
+        <p>
+          Je suis étudiant en 1ère année informatique. J’aime concevoir des interfaces claires et des fonctionnalités utiles,
+          en visant des applications performantes et bien structurées. J’apprends par la pratique, projet après projet.
+        </p>
+      </section>
+
+      <section id="skills" class="section skills">
+        <h2>Compétences</h2>
+        <ul class="skills-list">
+          <li><strong>Langages :</strong> Java, Python, Go, HTML, CSS</li>
+          <li><strong>Frontend :</strong> Accessibilité, Responsive Design, Animations CSS</li>
+          <li><strong>Backend (bases) :</strong> APIs REST (concepts), structuration de projets</li>
+          <li><strong>Outils :</strong> Git, GitHub, lignes de commande</li>
+        </ul>
+      </section>
+
+      <section id="projects" class="section projects">
+        <h2>Projets</h2>
+
+        <!-- Filtres -->
+        <div class="filters" role="group" aria-label="Filtres de projets">
+          <input type="radio" name="filter" id="filter-all" checked class="visually-hidden" />
+          <label for="filter-all" class="chip">Tous</label>
+          <input type="radio" name="filter" id="filter-web" class="visually-hidden" />
+          <label for="filter-web" class="chip">Web</label>
+          <input type="radio" name="filter" id="filter-java" class="visually-hidden" />
+          <label for="filter-java" class="chip">Java</label>
+          <input type="radio" name="filter" id="filter-python" class="visually-hidden" />
+          <label for="filter-python" class="chip">Python</label>
+          <input type="radio" name="filter" id="filter-go" class="visually-hidden" />
+          <label for="filter-go" class="chip">Go</label>
+          <input type="radio" name="filter" id="filter-ia" class="visually-hidden" />
+          <label for="filter-ia" class="chip">IA</label>
+        </div>
+
+        <!-- Carrousel -->
+        <div class="carousel" aria-label="Carrousel de projets">
+          <button class="carousel-btn prev" aria-label="Projet précédent">‹</button>
+          <div class="carousel-track">
+            <article class="project-card" data-cat="web">
+              <h3>Site web dynamique</h3>
+              <p>lancement de hiomIA </p>
+            </article>
+            <article class="project-card" data-cat="java">
+              <h3>API Java — mini backend</h3>
+              <p>Petite API en Java exposant des endpoints pour manipuler des données simples.</p>
+            </article>
+            <article class="project-card" data-cat="python">
+              <h3>Jeu Puissance 4</h3>
+              <p>Implémentation du jeu  avec logique de victoire et interface console/GUI.</p>
+            </article>
+            <article class="project-card" data-cat="ia">
+              <h3>Projet HiomIA</h3>
+              <p>Creation d'un projet d'un site web qui fait les services</p>
+            </article>
+            <article class="project-card" data-cat="go">
+              <h3>Service Go — CLI et HTTP</h3>
+              <p>creation d'un site web dynamique et landing page</p>
+            </article>
+          </div>
+          <button class="carousel-btn next" aria-label="Projet suivant">›</button>
+        </div>
+
+        <!-- Grille -->
+        <div class="projects-grid" aria-live="polite">
+          <article class="project-card" data-cat="web">
+            <h3>HiomIA</h3>
+            <p>Site statique moderne et avancée</p>
+          </article>
+          <article class="project-card" data-cat="java">
+            <h3>Gestion d’inventaire (Java)</h3>
+            <p>Application Java pour gérer des éléments et effectuer des recherches.</p>
+          </article>
+          <article class="project-card" data-cat="python">
+            <h3>Analyse de logs (Python)</h3>
+            <p>Extraction et agrégation de métriques avec visualisation simple.</p>
+          </article>
+          <article class="project-card" data-cat="go">
+            <h3>Serveur Go minimal</h3>
+            <p>Serveur HTTP Go pour exposer des routes et servir des pages.</p>
+          </article>
+          <article class="project-card" data-cat="ia">
+            <h3>Hio mIA — assistant</h3>
+            <p>Exploration des bases de l’IA appliquée à des réponses guidées.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <h2>Contact</h2>
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-row">
+            <label for="name">Nom</label>
+            <input id="name" name="name" type="text" required placeholder="Votre nom" />
+            <small class="error" id="err-name" aria-live="polite"></small>
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="vous@gmail.com" />
+            <small class="error" id="err-email" aria-live="polite"></small>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Votre message"></textarea>
+            <small class="error" id="err-message" aria-live="polite"></small>
+          </div>
+          <button type="submit" class="btn primary">Envoyer</button>
+          <p class="form-status" id="form-status" aria-live="polite"></p>
+        </form>
+        <p class="contact-alt">Ou écrivez-moi directement : <a href="mailto:adibhoussine08@gmail.com">adibhoussine08@gmail.com</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2025 Adib Houssine. Tous droits réservés.</p>
+      <p id="visit-counter" aria-live="polite"></p>
+    </footer>
+  </div>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
